@@ -221,7 +221,7 @@ class Onec(OnecHelperFuncs):
            
             self.wait_and_click(EXCHANGE_URL+'exchange_close.png')
             
-            # self.wait_and_click(EXCHANGE_URL+'Alert_message_close.png')
+            self.wait_and_click(EXCHANGE_URL+'Alert_message_close.png')
             
             exchange_res = ex1+ex2
 
@@ -337,9 +337,9 @@ class Onec(OnecHelperFuncs):
         self.wait_and_click(CHECKLIST_URL+'Checklist_kpi_ok.png')
                 
 
-        if shop == 'Крылатское':
-            self.wait_and_click(CHECKLIST_URL+'Checklist_close.png')
-        if shop in ['Домодедовская', 'Европейский']:
+        if shop in [ 'Европейский', 'Крылатское']:
+            self.wait_and_click(CHECKLIST_URL+'Checklist_close_krilo.png')
+        if shop in ['Домодедовская']:
             self.wait_and_click(CHECKLIST_URL+'Checklist_close_dmd.png')
 
         self.wait_and_click(CHECKLIST_URL+'Checklist_save_sure.png')
@@ -391,9 +391,9 @@ class Onec(OnecHelperFuncs):
         if shop in ['Домодедовская', 'Европейский']:
             self.close_office_lisense()
 
-        if shop == 'Крылатское':
-            self.wait_and_click(CHECKLIST_URL+'Checklist_close.png')
-        if shop in ['Домодедовская', 'Европейский']:
+        if shop in ['Европейский', 'Крылатское']:
+            self.wait_and_click(CHECKLIST_URL+'Checklist_close_krilo.png')
+        if shop in ['Домодедовская']:
             self.wait_and_click(CHECKLIST_URL+'Checklist_close_dmd.png')
         
     

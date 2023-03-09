@@ -320,14 +320,14 @@ class Application(tk.Tk, Onec):
         self.openBtn.pack(fill=tk.X)
 
         #Чекбар тест режима
-        # self.var6 = tk.IntVar()
-        # self.var6.set(0)
+        self.var6 = tk.IntVar()
+        self.var6.set(0)
 
-        # self.testFrame = ttk.Frame(self, padding=5)
-        # self.testFrame.pack(fill=tk.BOTH)
+        self.testFrame = ttk.Frame(self, padding=5)
+        self.testFrame.pack(fill=tk.BOTH)
 
-        # self.testCheckbutton1 = ttk.Checkbutton(self.testFrame, text='Тестовый режим', variable = self.var6)
-        # self.testCheckbutton1.pack(fill=tk.X)
+        self.testCheckbutton1 = ttk.Checkbutton(self.testFrame, text='Тестовый режим', variable = self.var6)
+        self.testCheckbutton1.pack(fill=tk.X)
 
     def get_NAME_and_SHOP(self):
         nameNum = self.nameCombobox.current() + 1
@@ -356,8 +356,8 @@ class Application(tk.Tk, Onec):
             self.checklist(name, mainN, checkN, shop, PASS, tst)
 
     def open(self):
-        # tst = self.var6.get()
-        tst = False
+        tst = self.var6.get()
+     
         PASS = self.passEntry.get()
         if len(PASS) == 4:
             name, mainN, regN, checkN, shop, shopN = self.get_NAME_and_SHOP()
